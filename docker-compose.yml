@@ -1,12 +1,13 @@
 version: '2'
 services:
   main:
-    container_name: mongo
+    container_name: mongodb
     image: mongo
     restart: always
-    environment:
-        MONGO_INITDB_ROOT_USERNAME: root
-        MONGO_INITDB_ROOT_PASSWORD: example
+    #environment:
+    #    MONGO_INITDB_DATABASE: mydb
+    #    MONGO_INITDB_ROOT_USERNAME: root
+    #    MONGO_INITDB_ROOT_PASSWORD: example
     volumes:
       - ./dbs:/data/db
       - ./mydb:/mnt/mydb
