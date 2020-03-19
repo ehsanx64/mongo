@@ -14,3 +14,12 @@ services:
     ports:
       - 27017:27017
     command: mongod 
+    networks:
+      static-network:
+        ipv4_address: 172.22.0.2
+networks: 
+  static-network:
+    ipam: 
+      config: 
+        - subnet: 172.22.0.0/16
+
